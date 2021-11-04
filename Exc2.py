@@ -40,9 +40,11 @@ print(f'x1 + x2 = {Vietea1} \nx * x2 = {Vietea2}')
 x1 =2
 x2=-4
 y1=4
-y2=5
+y2=6
 
 srx=(x1+x2)/2
 sry=(y1+y2)/2
 
 print(f'Środek odcinka AB: ({srx},{sry})')
+
+#7
