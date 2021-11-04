@@ -48,3 +48,4 @@ sry=(y1+y2)/2
 print(f'Środek odcinka AB: ({srx},{sry})')
 
 #7
+print('blbablabla')
