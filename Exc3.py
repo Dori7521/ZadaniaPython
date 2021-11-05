@@ -40,3 +40,10 @@ for i in range(len(lista)):
 
 mean1 = math.pow(iloczyn,1.0/len(lista))
 print(f'Śr geometryczna: {mean1:.2f}')
+
+#11
+a1 = 1
+q = 1/2
+
+suma = a1/(1-q)
+print(f'Suma ciągu wynosi: {suma}')
