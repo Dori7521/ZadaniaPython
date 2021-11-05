@@ -50,3 +50,4 @@ print(f'Środek odcinka AB: ({srx},{sry})')
 #7
 print('blbablabla')
 x=3
+z=456789
