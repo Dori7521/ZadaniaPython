@@ -1,5 +1,9 @@
 # Operator wycinania
 
+"""
+merge 
+pull request
+"""
 #1
 filename = 'view.jpg'
 print(filename [-3:])
