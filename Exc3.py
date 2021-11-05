@@ -21,3 +21,22 @@ x1 = (-b - math.sqrt(delta))/2*a  # x1 = (-b - delta_sqrt)/2*a
 x2 =  (-b + math.sqrt(delta))/2*a
 
 print(f'x1 = {x1} \nx2 = {x2}')
+
+#10
+a = 4
+b = 3
+c = 4.5
+d = 5
+
+mean = (a*b*c*d)**(1/4) # mean = math.pow(a*b*c*d,1.0/4)
+
+print(f'Śrenida geometryczna podanych liczba: {mean:.2f}')
+
+#10a - próba innym sposobem
+lista =[a,b,c,d]
+iloczyn = 1
+for i in range(len(lista)):
+    iloczyn*=lista[i]
+
+mean1 = math.pow(iloczyn,1.0/len(lista))
+print(f'Śr geometryczna: {mean1:.2f}')
