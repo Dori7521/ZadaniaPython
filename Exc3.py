@@ -1,5 +1,5 @@
+# Dalsze rozwiazywanie zadan
 import math
-print(f'Dalsze roziwazywanie zadan')
 #8
 ax = 3
 ay = 2
@@ -44,6 +44,14 @@ print(f'Śr geometryczna: {mean1:.2f}')
 #11
 a1 = 1
 q = 1/2
-
 suma = a1/(1-q)
 print(f'Suma ciągu wynosi: {suma}')
+
+#12
+x = 10
+y = 11
+z = 9
+sr_aryt = (x+y+z)/3
+war = ((x-sr_aryt)**2+(y-sr_aryt)**2+(z-sr_aryt)**2)/3.0
+odch_stand = math.sqrt(war)      # odch_stand = war**(1/2)
+print(f'Odchylenie standardowe zestawu danych wynosi: {odch_stand:.2f}')
