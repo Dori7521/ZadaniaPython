@@ -1,0 +1,1 @@
+print(f'Dalsze roziwazywanie zadan')
