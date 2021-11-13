@@ -49,3 +49,25 @@ ticker = [
     'OPL', 'PEO', 'PGE', 'PGN', 'PKN',
     'PKO', 'PLY', 'PZU', 'SPL', 'TPE'
 ]
+
+print(dict(enumerate(ticker)))
+
+#11
+project_ids = {
+    '01': 'open', 
+    '03': 'in progress',
+    '05': 'in progress',
+    '04': 'completed'
+}
+val = project_ids.values()
+zbior = set(val)
+print(list(sorted(zbior)))
+
+#12
+stats = {'strona': 'e-smartdata.org', 'ruch': 100, 'typ': 'organiczny'}
+del stats['ruch']
+print(stats)
+
+#13
+users = {'001': 'Marek', '002': 'Monika', '003': 'Jakub'}
+print(users.get('004','nieokreślony'))
