@@ -1,4 +1,4 @@
-# pętla while
+# pętla WHILE
 
 #1
 hmuch = 0
@@ -73,3 +73,34 @@ while start<=end:
         else:
             end = mid -1
 
+
+# ZADANIA Z  WYJĄTKÓW
+
+#1
+suma = 3000
+counter = 0
+
+try:
+    result = suma/counter
+except ZeroDivisionError:
+    print('Dzielenie przez zero.')
+
+
+#2
+try:
+    with open('file.txt', 'r') as file:
+        content = file.read()
+except FileNotFoundError:
+    print('Nie znaleziono pliku.')
+
+#3
+users = {'001': 'Marek', '002': 'Monika', '003': 'Jakub'}
+user_id = '004'
+
+try:
+    print(users['004'])
+except KeyError:
+    print(f'Klucz {user_id} nie występuje w słowniku. Dodawanie klucza...')
+    users.update({user_id:None})
+
+print(users)
