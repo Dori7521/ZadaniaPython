@@ -61,21 +61,15 @@ start = 0
 end = len(numbers) - 1
 flag = None
 
-while start <= end:
+while start<=end:
     mid = int((start+end)/2)
 
-    if numbers[mid]==target:
+    if numbers[mid] == target:
         flag = True
         break
     else:
         if numbers[mid]<target:
             start = mid+1
         else:
-            end = mid -1 
-
-if flag:
-    print('Znaleziono')
-else:
-    print('Nie znaleziono')
-
+            end = mid -1
 
