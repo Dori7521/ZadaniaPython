@@ -9,14 +9,14 @@ while hmuch <10:
     for i in range(2,number):
         if number%i==0:
             break
-    else:
-        prime.append(str(number))
-        hmuch+=1
+        else:
+            prime.append(str(number))
+            hmuch+=1
     number+=1
 
 print(','.join(prime))
 
-# while hmuch<10:                                                for else i number+=1 są w jednej linii !!!!!!!!
+# while hmuch<10:                                                for, else i number+=1 są w jednej linii !!!!!!!!
 #     for i in range(2,number):                                 dla number = 2 nie znajduje iteracji i idzie do else
 #         if number%i==0:                                       number = 6   6 dzieli 2 ->od razu zachodzi break pętli (nie jest pierwsza) i idzie dalej (number+=1)                                                              
 #             print(f'{number} is not a prime number!')         number = 5  5 nie dzieli 2,3,4 -> idzie do else i wykonuje tamtejsze poelcenia
@@ -98,7 +98,7 @@ users = {'001': 'Marek', '002': 'Monika', '003': 'Jakub'}
 user_id = '004'
 
 try:
-    print(users['004'])
+    print(users[user_id])
 except KeyError:
     print(f'Klucz {user_id} nie występuje w słowniku. Dodawanie klucza...')
     users.update({user_id:None})
