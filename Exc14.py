@@ -54,12 +54,25 @@ print(result)
 with open('plw_d.csv','r') as file:
     content = file.read().splitlines()
     
-data = [(line.split(',')[0],line.split(',')[4]) for line in content]
+# data = [(line.split(',')[0],line.split(',')[4]) for line in content]
 
-result = {
-    data[0][0] : [data[1:][i][0] for i in range(len(data)-1)],
-    data[0][1] : [float(data[1:][i][1]) for j in range(len(data)-1)]
-}
+# result = {
+#     data[0][0] : [data[1:][i][0] for i in range(len(data)-1)],
+#     data[0][1] : [float(data[1:][i][1]) for j in range(len(data)-1)]
+# }
 
-print(result)
+# print(result)
 
+data_dict = dict()
+list1 = list()
+list2 = list()
+
+for idx, line in enumerate(content):
+    if idx>0:
+        list1.append(line.split(',')[0])
+        list2.append(float(line.split(',')[4]))
+
+data_dict['Data']=list1
+data_dict['Zamkniecie'] = list2
+
+print(data_dict)
