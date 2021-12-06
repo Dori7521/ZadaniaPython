@@ -39,9 +39,8 @@ print(f'3-dniowa srednia cena zamkniecia: {close_avg:.2f}')
 #2
 with open('indeksy.txt','r') as file:
     line = file.read().splitlines()
-
+# -----------------------------------
 result = []
-
 for name in line:
     if name.startswith('WIG'):
         result.append(name)
@@ -51,6 +50,16 @@ print(result)
 # indexes = [index for index in lines if index.startswith('WIG)]
 # print(indexes)
 
+#3
+with open('plw_d.csv','r') as file:
+    content = file.read().splitlines()
+    
+data = [(line.split(',')[0],line.split(',')[4]) for line in content]
 
+result = {
+    data[0][0] : [data[1:][i][0] for i in range(len(data)-1)],
+    data[0][1] : [float(data[1:][i][1]) for j in range(len(data)-1)]
+}
 
+print(result)
 
