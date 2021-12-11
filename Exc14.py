@@ -76,3 +76,24 @@ data_dict['Data']=list1
 data_dict['Zamkniecie'] = list2
 
 print(data_dict)
+
+#4
+with open('plw_d.csv', 'r') as file:
+    content = file.read().splitlines()
+
+wol = []
+
+for idx, line in enumerate(content):
+    if idx > 0:
+        wol.append(int(line.split(',')[-1]))
+
+max_val = wol[0]                # max(wol)
+for value in wol:
+    if max_val>=value:
+        continue
+    else:
+        max_val = value
+
+print(f'Max Vol: {max_val}')
+
+#5
