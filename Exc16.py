@@ -1,4 +1,4 @@
-#Funkcje
+#Funkcje wbudowane
 
 #1
 x = -1.5
@@ -41,6 +41,6 @@ print(any(items))
 #7
 number = 234
 binary = bin(number)
-count = 0
-
+#binary = binary[2:]
 print(binary.count('1'))
+
