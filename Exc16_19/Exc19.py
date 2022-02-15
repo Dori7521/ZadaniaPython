@@ -19,13 +19,13 @@ def enum(items):
 #3
 def dayname(index):
     days = ['pon','wt','śr','czw','pt','sb','nd']
-    yield days[-1]
+    yield days[index-1]
     yield days[index]
     yield days[(index+1)%7]
 
 
-for pair in dayname(0):
-    print(pair)
+# for pair in dayname(0):
+#     print(pair)
 
 
 
