@@ -2,8 +2,6 @@
 
 #1
 import calendar
-import numbers
-from unittest import result
 
 year = calendar.calendar(2020)
 print(year)
