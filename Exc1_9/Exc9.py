@@ -50,7 +50,7 @@ ticker = [
     'PKO', 'PLY', 'PZU', 'SPL', 'TPE'
 ]
 
-print(dict(enumerate(ticker)))
+print(list(enumerate(ticker)))
 
 #11
 project_ids = {
