@@ -2,6 +2,8 @@
 
 #1
 import calendar
+from turtle import resetscreen
+from unittest import result
 
 year = calendar.calendar(2020)
 print(year)
@@ -44,4 +46,65 @@ print(res)
 raw_text = "Wyślij email na adres: info@template.com lub sales-info@template.it"
 
 res = re.findall(r'[\w\.-]+@[\w\.-]+',raw_text)
+print(res)
+
+#7
+text = 'Programowanie w języku Python - od A do Z'
+
+lista = re.split(r'\s+',text)
+
+print(lista)
+
+#8
+
+import string
+
+print(string.ascii_letters)
+
+#9
+from collections import Counter
+
+items = ['YES', 'NO', 'NO', 'YES', 'EMPTY', 'YES', 'NO']
+
+print(Counter(items))
+
+#10
+import math
+
+def sigmoid(x):
+    return (1/(1+math.exp(-x)))
+
+#11
+import random
+
+ziarno = random.seed(12)
+
+items = ['python', 'java', 'sql', 'c++', 'c']
+
+
+print(random.choice(items))
+
+#12
+random.seed(15)
+
+items = ['python', 'java', 'sql', 'c++', 'c']
+
+random.shuffle(items)
+
+print(items)
+
+#13
+import pickle
+
+ids=['001', '003', '011']
+
+with open('data.pickle','wb') as file:    #write and binary
+    pickle.dump(ids,file)
+
+#14
+import json
+
+stocks = {'PLW': 360.0, 'TEN': 320.0, 'CDR': 329.0}
+
+res = json.dumps(stocks,indent=4,sort_keys=True)
 print(res)
