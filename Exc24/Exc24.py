@@ -1,6 +1,10 @@
 #Exercises
 
 #1
+from http.client import MULTI_STATUS
+from turtle import dot, width
+
+
 y_true = [0, 0, 1, 1, 0, 1, 0]
 y_pred = [0, 0, 1, 0, 0, 1, 0]
 
@@ -123,16 +127,100 @@ def fill_value(height,width,value):
     return array
 
 #12
-
 def trace(x):
     result=0
-    # array=[[x] for i in range(x)]
     for idx,item in enumerate(x):
         result+=item[idx]
     return result
 
 print(trace([[1,2,3],[4,2,3],[3,2,1]]))
 
+#13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+def transpose(array):
+    width = len(array[0])
+    result = []
+    for i in range(width):
+        pair=[]
+        for item in array:
+            pair.append(item[i])
+        print(pair)
+        result.append(pair)
+    return result
 
+
+print(transpose([[1,2,3],[4,5,6]]))
+
+# 14
+
+def max_prob(array):
+    result=[]
+    for idx,item in enumerate(array):
+        max_val=max(item)
+        result.append([max_val])
+    return result
+
+print(max_prob([[0.3,0.4,0.3],[0.0,0.1,0.9],[0.0,0.5,0.5]]))
+
+#15
+def detect_class(array):
+    result = []
+
+    for idx, item in enumerate(array):
+        pair=[]
+        max_val = max(item)
+        for i in range(len(array[idx])):
+            if item[i]==max_val:
+                pair.append(1)
+            else:
+                pair.append(0)
+        result.append(pair)
+    return result
+
+
+# def detect_class(array):
+#     result = []
+ 
+#     for item in array:
+#         max_val = max(item)
+#         empty = [0] * len(item)
+#         for idx, val in enumerate(item):
+#             if val == max_val:
+#                 empty[idx] = 1
+#                 result.append(empty)
+#     return result
+
+print(detect_class([[0.3,0.4,0.2,0.1],[0.0,0.1,0.7,0.2],[0.0,0.3,0.3,0.4]]))
+
+# 16 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+def dot_product(v1,v2):
+    result = sum([v*w for v,w in zip(v1,v2)])
+    return result
+
+print(dot_product([1,2],[5,2]))
+
+#17
+
+def count_none(lista):
+    result = lista.count(None)
+    return result
+
+# def count_none(items):
+#     counter = 0
+#     for item in items:
+#         if not item:
+#             counter += 1
+#     return counter
+
+print(count_none([1,None,None,5,None,2]))
+
+#18
+
+def top_n(lista,num):
+    lista.sort(reverse=True)
+    result = lista[:num]
+    return result
+    
+print(top_n([4,5,6,10,9,1,98,69,123],5))
 
 
